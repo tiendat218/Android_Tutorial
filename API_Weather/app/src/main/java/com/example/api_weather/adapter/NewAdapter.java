@@ -74,7 +74,7 @@ public class NewAdapter extends RecyclerView.Adapter {
         Date date = null;
         try {
             date = inFormat.parse(inputTime);
-        } catch (ParseException e) {
+        } catch (ParseException | java.text.ParseException e) {
             e.printStackTrace();
         }
         SimpleDateFormat outFormat = new SimpleDateFormat("ha");
